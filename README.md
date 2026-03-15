@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="./static/image/MiroFish_logo_compressed.jpeg" alt="MiroFish Logo" width="75%"/>
+<img src="./static/image/MiroFish_logo_compressed.jpeg" alt="โลโก้ MiroFish" width="75%"/>
 
 <a href="https://trendshift.io/repositories/16144" target="_blank"><img src="https://trendshift.io/api/badge/repositories/16144" alt="666ghj%2FMiroFish | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
-简洁通用的群体智能引擎，预测万物
+เครื่องยนต์สติปัญญาหมู่ที่เรียบง่ายและเป็นสากล คาดการณ์ได้ทุกอย่าง
 </br>
 <em>A Simple and Universal Swarm Intelligence Engine, Predicting Anything</em>
 
@@ -20,184 +20,184 @@
 [![X](https://img.shields.io/badge/X-Follow-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/mirofish_ai)
 [![Instagram](https://img.shields.io/badge/Instagram-Follow-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://www.instagram.com/mirofish_ai/)
 
-[English](./README-EN.md) | [中文文档](./README.md)
+[English](./README-EN.md) | [ไทย](./README.md)
 
 </div>
 
-## ⚡ 项目概述
+## ⚡ ภาพรวมโปรเจกต์
 
-**MiroFish** 是一款基于多智能体技术的新一代 AI 预测引擎。通过提取现实世界的种子信息（如突发新闻、政策草案、金融信号），自动构建出高保真的平行数字世界。在此空间内，成千上万个具备独立人格、长期记忆与行为逻辑的智能体进行自由交互与社会演化。你可透过「上帝视角」动态注入变量，精准推演未来走向——**让未来在数字沙盘中预演，助决策在百战模拟后胜出**。
+**MiroFish** เป็นเอ็นจิ้น AI คาดการณ์รุ่นใหม่ที่ใช้เทคโนโลยีมัลติเอเจนต์ โดยดึงข้อมูลเมล็ดพันธุ์จากโลกจริง (เช่น ข่าวด่วน ร่างนโยบาย สัญญาณการเงิน) แล้วสร้างโลกดิจิทัลคู่ขนานที่มีความเที่ยงตรงสูง ในพื้นที่นี้ เอเจนต์อัจฉริยะหลายพันตัวที่มีบุคลิก ความทรงจำระยะยาว และตรรกะการกระทำเป็นของตัวเอง จะมีปฏิสัมพันธ์และวิวัฒนาการทางสังคมอย่างอิสระ คุณสามารถฉีดตัวแปรแบบไดนามิกผ่าน "มุมมองพระเจ้า" เพื่อจำลองอนาคตได้อย่างแม่นยำ — **ให้อนาคตถูกซ้อมในแซนด์บ็อกซ์ดิจิทัล ช่วยให้การตัดสินใจชนะหลังการจำลองนับร้อย**
 
-> 你只需：上传种子材料（数据分析报告或者有趣的小说故事），并用自然语言描述预测需求</br>
-> MiroFish 将返回：一份详尽的预测报告，以及一个可深度交互的高保真数字世界
+> คุณแค่: อัปโหลดวัสดุเมล็ดพันธุ์ (รายงานวิเคราะห์ข้อมูล หรือเรื่องสั้นที่น่าสนใจ) และอธิบายความต้องการการคาดการณ์ด้วยภาษาธรรมชาติ</br>
+> MiroFish จะส่งคืน: รายงานคาดการณ์โดยละเอียด และโลกดิจิทัลความเที่ยงตรงสูงที่โต้ตอบได้ลึก
 
-### 我们的愿景
+### วิสัยทัศน์ของเรา
 
-MiroFish 致力于打造映射现实的群体智能镜像，通过捕捉个体互动引发的群体涌现，突破传统预测的局限：
+MiroFish มุ่งสร้างกระจกสติปัญญาหมู่ที่สะท้อนความเป็นจริง โดยจับการเกิด emergent จากปฏิสัมพันธ์ของปัจเจก เพื่อก้าวข้ามข้อจำกัดของการคาดการณ์แบบเดิม:
 
-- **于宏观**：我们是决策者的预演实验室，让政策与公关在零风险中试错
-- **于微观**：我们是个人用户的创意沙盘，无论是推演小说结局还是探索脑洞，皆可有趣、好玩、触手可及
+- **ในระดับมหภาค**: เราเป็นห้องแล็บซ้อมสำหรับผู้ตัดสินใจ ให้นโยบายและประชาสัมพันธ์ลองผิดลองถูกโดยความเสี่ยงเป็นศูนย์
+- **ในระดับจุลภาค**: เราเป็นแซนด์บ็อกซ์สร้างสรรค์สำหรับผู้ใช้ ไม่ว่าจะจำลองตอนจบนิยายหรือสำรวจไอเดียแปลกๆ ก็สนุก เข้าถึงได้ และทำได้
 
-从严肃预测到趣味仿真，我们让每一个如果都能看见结果，让预测万物成为可能。
+จากการคาดการณ์เชิงจริงจังถึงการจำลองสนุกๆ เราทำให้ทุก “ถ้า” เห็นผลได้ และทำให้การคาดการณ์ทุกอย่างเป็นไปได้
 
-## 🌐 在线体验
+## 🌐 ทดลองออนไลน์
 
-欢迎访问在线 Demo 演示环境，体验我们为你准备的一次关于热点舆情事件的推演预测：[mirofish-live-demo](https://666ghj.github.io/mirofish-demo/)
+ยินดีต้อนรับสู่สภาพแวดล้อม Demo ออนไลน์ ลองการจำลองคาดการณ์เหตุการณ์ความเห็นของสาธารณะที่เราเตรียมไว้: [mirofish-live-demo](https://666ghj.github.io/mirofish-demo/)
 
-## 📸 系统截图
+## 📸 ภาพหน้าจอระบบ
 
 <div align="center">
 <table>
 <tr>
-<td><img src="./static/image/Screenshot/运行截图1.png" alt="截图1" width="100%"/></td>
-<td><img src="./static/image/Screenshot/运行截图2.png" alt="截图2" width="100%"/></td>
+<td><img src="./static/image/Screenshot/screenshot1.png" alt="ภาพหน้าจอ 1" width="100%"/></td>
+<td><img src="./static/image/Screenshot/screenshot2.png" alt="ภาพหน้าจอ 2" width="100%"/></td>
 </tr>
 <tr>
-<td><img src="./static/image/Screenshot/运行截图3.png" alt="截图3" width="100%"/></td>
-<td><img src="./static/image/Screenshot/运行截图4.png" alt="截图4" width="100%"/></td>
+<td><img src="./static/image/Screenshot/screenshot3.png" alt="ภาพหน้าจอ 3" width="100%"/></td>
+<td><img src="./static/image/Screenshot/screenshot4.png" alt="ภาพหน้าจอ 4" width="100%"/></td>
 </tr>
 <tr>
-<td><img src="./static/image/Screenshot/运行截图5.png" alt="截图5" width="100%"/></td>
-<td><img src="./static/image/Screenshot/运行截图6.png" alt="截图6" width="100%"/></td>
+<td><img src="./static/image/Screenshot/screenshot5.png" alt="ภาพหน้าจอ 5" width="100%"/></td>
+<td><img src="./static/image/Screenshot/screenshot6.png" alt="ภาพหน้าจอ 6" width="100%"/></td>
 </tr>
 </table>
 </div>
 
-## 🎬 演示视频
+## 🎬 วิดีโอสาธิต
 
-### 1. 武汉大学舆情推演预测 + MiroFish项目讲解
-
-<div align="center">
-<a href="https://www.bilibili.com/video/BV1VYBsBHEMY/" target="_blank"><img src="./static/image/武大模拟演示封面.png" alt="MiroFish Demo Video" width="75%"/></a>
-
-点击图片查看使用微舆BettaFish生成的《武大舆情报告》进行预测的完整演示视频
-</div>
-
-### 2. 《红楼梦》失传结局推演预测
+### 1. การจำลองคาดการณ์ความเห็นของสาธารณะ Wuhan University + อธิบายโปรเจกต์ MiroFish
 
 <div align="center">
-<a href="https://www.bilibili.com/video/BV1cPk3BBExq" target="_blank"><img src="./static/image/红楼梦模拟推演封面.jpg" alt="MiroFish Demo Video" width="75%"/></a>
+<a href="https://www.bilibili.com/video/BV1VYBsBHEMY/" target="_blank"><img src="./static/image/demo-wuhan-cover.png" alt="วิดีโอสาธิต MiroFish" width="75%"/></a>
 
-点击图片查看基于《红楼梦》前80回数十万字，MiroFish深度预测失传结局
+คลิกภาพเพื่อดูวิดีโอสาธิตเต็มของการคาดการณ์ด้วยรายงานความเห็น Wuhan University ที่สร้างโดย微舆BettaFish
 </div>
 
-> **金融方向推演预测**、**时政要闻推演预测**等示例陆续更新中...
+### 2. การจำลองคาดการณ์ตอนจบที่สูญหายของ "ความฝันในหอแดง"
 
-## 🔄 工作流程
+<div align="center">
+<a href="https://www.bilibili.com/video/BV1cPk3BBExq" target="_blank"><img src="./static/image/demo-dream-red-mansions-cover.jpg" alt="วิดีโอสาธิต MiroFish" width="75%"/></a>
 
-1. **图谱构建**：现实种子提取 & 个体与群体记忆注入 & GraphRAG构建
-2. **环境搭建**：实体关系抽取 & 人设生成 & 环境配置Agent注入仿真参数
-3. **开始模拟**：双平台并行模拟 & 自动解析预测需求 & 动态更新时序记忆
-4. **报告生成**：ReportAgent拥有丰富的工具集与模拟后环境进行深度交互
-5. **深度互动**：与模拟世界中的任意一位进行对话 & 与ReportAgent进行对话
+คลิกภาพเพื่อดูการคาดการณ์ตอนจบที่สูญหายโดย MiroFish จากข้อความหลายแสนคำ 80 ตอนแรกของ "ความฝันในหอแดง"
+</div>
 
-## 🚀 快速开始
+> ตัวอย่าง **การจำลองคาดการณ์ด้านการเงิน**, **การจำลองคาดการณ์ข่าวการเมือง** ฯลฯ จะอัปเดตเรื่อยๆ...
 
-### 一、源码部署（推荐）
+## 🔄 ขั้นตอนการทำงาน
 
-#### 前置要求
+1. **สร้างกราฟ**: ดึงเมล็ดพันธุ์จากความเป็นจริง & ฉีดความทรงจำปัจเจกและหมู่ & สร้าง GraphRAG
+2. **เตรียมสภาพแวดล้อม**: ดึงความสัมพันธ์เอนทิตี & สร้างบุคลิก & ฉีดพารามิเตอร์จำลองผ่าน Agent ตั้งค่าสภาพแวดล้อม
+3. **เริ่มจำลอง**: จำลองแบบขนานสองแพลตฟอร์ม & แยกความต้องการคาดการณ์อัตโนมัติ & อัปเดตความทรงจำเชิงเวลาแบบไดนามิก
+4. **สร้างรายงาน**: ReportAgent มีชุดเครื่องมือหลากหลายและโต้ตอบลึกกับสภาพแวดล้อมหลังจำลอง
+5. **โต้ตอบลึก**: สนทนากับใครก็ได้ในโลกจำลอง & สนทนากับ ReportAgent
 
-| 工具 | 版本要求 | 说明 | 安装检查 |
+## 🚀 เริ่มต้นอย่างรวดเร็ว
+
+### หนึ่ง、การติดตั้งจากซอร์สโค้ด (แนะนำ)
+
+#### ความต้องการเบื้องต้น
+
+| เครื่องมือ | เวอร์ชันที่ต้องการ | หมายเหตุ | ตรวจสอบการติดตั้ง |
 |------|---------|------|---------|
-| **Node.js** | 18+ | 前端运行环境，包含 npm | `node -v` |
-| **Python** | ≥3.11, ≤3.12 | 后端运行环境 | `python --version` |
-| **uv** | 最新版 | Python 包管理器 | `uv --version` |
+| **Node.js** | 18+ | สภาพแวดล้อมรัน frontend รวม npm | `node -v` |
+| **Python** | ≥3.11, ≤3.12 | สภาพแวดล้อมรัน backend | `python --version` |
+| **uv** | เวอร์ชันล่าสุด | ตัวจัดการแพ็กเกจ Python | `uv --version` |
 
-#### 1. 配置环境变量
+#### 1. ตั้งค่าตัวแปรสภาพแวดล้อม
 
 ```bash
-# 复制示例配置文件
+# คัดลอกไฟล์ตัวอย่างการตั้งค่า
 cp .env.example .env
 
-# 编辑 .env 文件，填入必要的 API 密钥
+# แก้ไขไฟล์ .env แล้วใส่ API key ที่จำเป็น
 ```
 
-**必需的环境变量：**
+**ตัวแปรสภาพแวดล้อมที่จำเป็น:**
 
 ```env
-# LLM API配置（支持 OpenAI SDK 格式的任意 LLM API）
-# 推荐使用阿里百炼平台qwen-plus模型：https://bailian.console.aliyun.com/
-# 注意消耗较大，可先进行小于40轮的模拟尝试
+# การตั้งค่า LLM API (รองรับ LLM API ใดๆ ในรูปแบบ OpenAI SDK)
+# แนะนำใช้โมเดล qwen-plus จาก Alibaba Bailian: https://bailian.console.aliyun.com/
+# หมายเหตุ: การใช้งานสูง ลองจำลองน้อยกว่า 40 รอบก่อนได้
 LLM_API_KEY=your_api_key
 LLM_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
 LLM_MODEL_NAME=qwen-plus
 
-# Zep Cloud 配置
-# 每月免费额度即可支撑简单使用：https://app.getzep.com/
+# การตั้งค่า Zep Cloud
+# โควตาฟรีรายเดือนเพียงพอสำหรับการใช้งานพื้นฐาน: https://app.getzep.com/
 ZEP_API_KEY=your_zep_api_key
 ```
 
-#### 2. 安装依赖
+#### 2. ติดตั้ง dependencies
 
 ```bash
-# 一键安装所有依赖（根目录 + 前端 + 后端）
+# ติดตั้ง dependencies ทั้งหมดในคำสั่งเดียว (รูท + frontend + backend)
 npm run setup:all
 ```
 
-或者分步安装：
+หรือติดตั้งแยกขั้นตอน:
 
 ```bash
-# 安装 Node 依赖（根目录 + 前端）
+# ติดตั้ง Node dependencies (รูท + frontend)
 npm run setup
 
-# 安装 Python 依赖（后端，自动创建虚拟环境）
+# ติดตั้ง Python dependencies (backend สร้าง virtual environment อัตโนมัติ)
 npm run setup:backend
 ```
 
-#### 3. 启动服务
+#### 3. เริ่มบริการ
 
 ```bash
-# 同时启动前后端（在项目根目录执行）
+# เริ่ม frontend และ backend พร้อมกัน (รันที่รูทโปรเจกต์)
 npm run dev
 ```
 
-**服务地址：**
-- 前端：`http://localhost:3000`
-- 后端 API：`http://localhost:5001`
+**ที่อยู่บริการ:**
+- Frontend: `http://localhost:3000`
+- Backend API: `http://localhost:5001`
 
-**单独启动：**
+**เริ่มแยก:**
 
 ```bash
-npm run backend   # 仅启动后端
-npm run frontend  # 仅启动前端
+npm run backend   # เริ่มเฉพาะ backend
+npm run frontend  # เริ่มเฉพาะ frontend
 ```
 
-### 二、Docker 部署
+### สอง、การติดตั้งด้วย Docker
 
 ```bash
-# 1. 配置环境变量（同源码部署）
+# 1. ตั้งค่าตัวแปรสภาพแวดล้อม (เหมือนการติดตั้งจากซอร์ส)
 cp .env.example .env
 
-# 2. 拉取镜像并启动
+# 2. ดึงอิมเมจและเริ่ม
 docker compose up -d
 ```
 
-默认会读取根目录下的 `.env`，并映射端口 `3000（前端）/5001（后端）`
+โดยค่าเริ่มต้นจะอ่าน `.env` ที่รูทโปรเจกต์ และแมปพอร์ต `3000 (frontend) / 5001 (backend)`
 
-> 在 `docker-compose.yml` 中已通过注释提供加速镜像地址，可按需替换
+> ใน `docker-compose.yml` มีที่อยู่ mirror เร่งความเร็วในคอมเมนต์ แทนที่ได้ตามต้องการ
 
-## 📬 更多交流
+## 📬 ติดต่อและชุมชน
 
 <div align="center">
-<img src="./static/image/QQ群.png" alt="QQ交流群" width="60%"/>
+<img src="./static/image/qq-group.png" alt="กลุ่ม QQ" width="60%"/>
 </div>
 
 &nbsp;
 
-MiroFish团队长期招募全职/实习，如果你对多Agent应用感兴趣，欢迎投递简历至：**mirofish@shanda.com**
+ทีม MiroFish รับสมัครพนักงานเต็มเวลา/ฝึกงานอย่างต่อเนื่อง หากสนใจแอปพลิเคชันมัลติเอเจนต์ ส่งเรซูเม่ได้ที่: **mirofish@shanda.com**
 
-## 📄 致谢
+## 📄 ขอบคุณ
 
-**MiroFish 得到了盛大集团的战略支持和孵化！**
+**MiroFish ได้รับการสนับสนุนเชิงกลยุทธ์และบ่มเพาะจาก Shanda Group!**
 
-MiroFish 的仿真引擎由 **[OASIS](https://github.com/camel-ai/oasis)** 驱动，我们衷心感谢 CAMEL-AI 团队的开源贡献！
+เอ็นจิ้นจำลองของ MiroFish ขับเคลื่อนโดย **[OASIS](https://github.com/camel-ai/oasis)** เราขอขอบคุณทีม CAMEL-AI สำหรับการเปิดซอร์ส!
 
-## 📈 项目统计
+## 📈 สถิติโปรเจกต์
 
 <a href="https://www.star-history.com/#666ghj/MiroFish&type=date&legend=top-left">
  <picture>
    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=666ghj/MiroFish&type=date&theme=dark&legend=top-left" />
    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=666ghj/MiroFish&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=666ghj/MiroFish&type=date&legend=top-left" />
+   <img alt="กราฟ Star History" src="https://api.star-history.com/svg?repos=666ghj/MiroFish&type=date&legend=top-left" />
  </picture>
 </a>
