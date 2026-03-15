@@ -670,9 +670,13 @@ class SimulationRunner:
                             )
                             state.add_action(action)
                             
-                            # 更新轮次
+                            # 更新轮次（含各平台 current_round，避免 UI 卡在 ROUND 0）
                             if action.round_num and action.round_num > state.current_round:
                                 state.current_round = action.round_num
+                            if action.round_num and platform == "twitter" and action.round_num > state.twitter_current_round:
+                                state.twitter_current_round = action.round_num
+                            if action.round_num and platform == "reddit" and action.round_num > state.reddit_current_round:
+                                state.reddit_current_round = action.round_num
                             
                             # 如果启用了图谱记忆更新，将活动发送到Zep
                             if graph_updater:

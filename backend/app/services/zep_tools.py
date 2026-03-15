@@ -813,7 +813,7 @@ Return JSON with sub_queries array."""
         result.active_count = len(active_facts)
         result.historical_count = len(historical_facts)
         
-        logger.info(f"PanoramaSearch完成: {result.active_count}条有效, {result.historical_count}条历史")
+        logger.info("PanoramaSearch done: %s active, %s historical", result.active_count, result.historical_count)
         return result
     
     def quick_search(

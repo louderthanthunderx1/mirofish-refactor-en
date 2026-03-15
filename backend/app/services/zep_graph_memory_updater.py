@@ -4,6 +4,7 @@ Graph memory updater: appends simulation agent activities to the configured grap
 
 import time
 import threading
+from datetime import datetime
 from typing import Dict, Any, List, Optional
 from dataclasses import dataclass
 from queue import Queue, Empty
