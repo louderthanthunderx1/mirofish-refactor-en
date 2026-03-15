@@ -54,7 +54,9 @@ Edit **`.env`** and set at least:
 | `LLM_API_KEY` | Yes | API key for the LLM (OpenAI or compatible). |
 | `LLM_BASE_URL` | Yes | Base URL (e.g. `https://api.openai.com/v1` for OpenAI). |
 | `LLM_MODEL_NAME` | Yes | Model name (e.g. `gpt-4o-mini` or `qwen-plus`). |
-| `ZEP_API_KEY` | Yes | Zep Cloud API key for graph and memory. |
+| **Graph backend** | Yes | `GRAPH_BACKEND=zep` (default) or `GRAPH_BACKEND=neo4j`. |
+| `ZEP_API_KEY` | When `zep` | Zep Cloud API key (app.getzep.com). |
+| `NEO4J_URI`, `NEO4J_USER`, `NEO4J_PASSWORD` | When `neo4j` | Neo4j connection (e.g. `bolt://localhost:7687`). |
 
 **LLM options (see `.env.example`):**
 
@@ -63,7 +65,7 @@ Edit **`.env`** and set at least:
 
 **Optional:** `LLM_BOOST_*` — only if you use a separate “boost” LLM; otherwise omit.
 
-The backend will not start if `LLM_API_KEY` or `ZEP_API_KEY` is missing (it runs `Config.validate()` on startup).
+The backend validates on startup: `LLM_API_KEY` is required; with `GRAPH_BACKEND=zep` it requires `ZEP_API_KEY`; with `GRAPH_BACKEND=neo4j` it requires `NEO4J_URI` and `NEO4J_PASSWORD`.
 
 ---
 
@@ -152,6 +154,23 @@ The compose file uses the image `ghcr.io/666ghj/mirofish:latest`, maps ports **3
 
 To use an alternative image (e.g. mirror), edit `docker-compose.yml` and uncomment or change the `image` line.
 
+### Run Neo4j with Docker (when using GRAPH_BACKEND=neo4j)
+
+To run Neo4j locally for the graph backend:
+
+```bash
+docker compose -f docker-compose.neo4j.yml up -d
+```
+
+This starts Neo4j 5 with **Bolt** on port **7687** and the **Browser UI** on **7474**. Default auth is `neo4j` / `neo4jdev` (override with `NEO4J_PASSWORD` in `.env`). Data is stored in a Docker volume `neo4j_data`. In your `.env` set:
+
+- `GRAPH_BACKEND=neo4j`
+- `NEO4J_URI=bolt://localhost:7687`
+- `NEO4J_USER=neo4j`
+- `NEO4J_PASSWORD=neo4jdev` (or the password you set in `NEO4J_PASSWORD` when starting the stack)
+
+Stop: `docker compose -f docker-compose.neo4j.yml down`.
+
 ---
 
 ## 7. Production build (frontend)
@@ -176,6 +195,7 @@ Output is in `frontend/dist/`. Serve these files with any static server and poin
 | Run frontend only | `npm run frontend` |
 | Build frontend | `npm run build` |
 | Docker up | `docker compose up -d` |
+| Neo4j (for graph backend) | `docker compose -f docker-compose.neo4j.yml up -d` |
 
 | URL | Service |
 |-----|---------|

@@ -3,7 +3,7 @@
     <!-- Header -->
     <header class="app-header">
       <div class="header-left">
-        <div class="brand" @click="router.push('/')">MIROFISH</div>
+        <div class="brand" @click="router.push('/')">LOKI</div>
       </div>
       
       <div class="header-center">
@@ -207,7 +207,7 @@ watch(() => route.params.reportId, (newId) => {
 }, { immediate: true })
 
 onMounted(() => {
-  addLog('ReportView 初始化')
+  addLog('ReportView init')
   loadReportData()
 })
 </script>
@@ -244,8 +244,8 @@ onMounted(() => {
 .brand {
   font-family: 'JetBrains Mono', monospace;
   font-weight: 800;
-  font-size: 18px;
-  letter-spacing: 1px;
+  font-size: 24px;
+  letter-spacing: 2px;
   cursor: pointer;
 }
 

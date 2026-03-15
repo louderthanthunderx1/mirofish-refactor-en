@@ -2,7 +2,7 @@
   <div class="process-page">
     <!-- Top navigation -->
     <nav class="navbar">
-      <div class="nav-brand" @click="goHome">MIROFISH</div>
+      <div class="nav-brand" @click="goHome">LOKI</div>
       
       <!-- Step indicator -->
       <div class="nav-center">
@@ -710,7 +710,7 @@ const startBuildGraph = async () => {
 // Graph data poll timer
 let graphPollTimer = null
 
-// 启动图谱数据轮询
+// Start graph data polling
 const startGraphPolling = () => {
   // Fetch once immediately
   fetchGraphData()
@@ -736,7 +736,7 @@ const stopGraphPolling = () => {
   }
 }
 
-// 获取图谱数据
+// Fetch graph data
 const fetchGraphData = async () => {
   try {
     // Get project to get graph_id
@@ -803,7 +803,7 @@ const pollTaskStatus = async (taskId) => {
         stopGraphPolling()
         currentPhase.value = 2
         
-        // Update progress为完成状态
+        // Update progress to complete
         buildProgress.value = {
           progress: 100,
           message: 'Build complete, loading graph...'
@@ -1122,7 +1122,7 @@ onUnmounted(() => {
 }
 
 .nav-brand {
-  font-size: 1rem;
+  font-size: 1.75rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   cursor: pointer;

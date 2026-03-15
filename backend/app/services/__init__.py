@@ -1,6 +1,4 @@
-"""
-业务服务模块
-"""
+"""Services."""
 
 from .ontology_generator import OntologyGenerator
 from .graph_builder import GraphBuilderService

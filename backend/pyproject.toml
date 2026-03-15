@@ -16,8 +16,11 @@ dependencies = [
     # LLM
     "openai>=1.0.0",
     
-    # Zep Cloud
+    # Zep Cloud (when GRAPH_BACKEND=zep)
     "zep-cloud==3.13.0",
+    
+    # Neo4j (when GRAPH_BACKEND=neo4j)
+    "neo4j>=5.0.0",
     
     # OASIS social simulation
     "camel-oasis==0.2.5",

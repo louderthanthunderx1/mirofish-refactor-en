@@ -3,7 +3,7 @@
     <!-- Header -->
     <header class="app-header">
       <div class="header-left">
-        <div class="brand" @click="router.push('/')">MIROFISH</div>
+        <div class="brand" @click="router.push('/')">LOKI</div>
       </div>
       
       <div class="header-center">
@@ -237,7 +237,7 @@ const forceStopSimulation = async () => {
 
 const loadSimulationData = async () => {
   try {
-    addLog(`加载模拟数据: ${currentSimulationId.value}`)
+    addLog(`Loading simulation: ${currentSimulationId.value}`)
     
     // Get simulation info
     const simRes = await getSimulation(currentSimulationId.value)
@@ -287,7 +287,7 @@ const refreshGraph = () => {
 }
 
 onMounted(async () => {
-  addLog('SimulationView 初始化')
+  addLog('SimulationView init')
   
   // Check and stop sim when user returns from Step 3
   await checkAndStopRunningSimulation()
@@ -323,8 +323,8 @@ onMounted(async () => {
 .brand {
   font-family: 'JetBrains Mono', monospace;
   font-weight: 800;
-  font-size: 18px;
-  letter-spacing: 1px;
+  font-size: 24px;
+  letter-spacing: 2px;
   cursor: pointer;
 }
 

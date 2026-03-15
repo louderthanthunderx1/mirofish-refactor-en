@@ -670,7 +670,7 @@ class OasisProfileGenerator:
     
     def _get_system_prompt(self, is_individual: bool) -> str:
         """获取系统提示词"""
-        base_prompt = "你是社交媒体用户画像生成专家。生成详细、真实的人设用于舆论模拟,最大程度还原已有现实情况。必须返回有效的JSON格式，所有字符串值不能包含未转义的换行符。使用中文。"
+        base_prompt = "You are a social media user persona generation expert. Generate detailed, realistic personas for opinion simulation that closely reflect real-world context. You must return valid JSON format; all string values must not contain unescaped newline characters. Use English."
         return base_prompt
     
     def _build_individual_persona_prompt(
@@ -686,40 +686,40 @@ class OasisProfileGenerator:
         attrs_str = json.dumps(entity_attributes, ensure_ascii=False) if entity_attributes else "无"
         context_str = context[:3000] if context else "无额外上下文"
         
-        return f"""为实体生成详细的社交媒体用户人设,最大程度还原已有现实情况。
+        return f"""Generate a detailed social media user persona for this entity, reflecting real-world context as closely as possible.
 
-实体名称: {entity_name}
-实体类型: {entity_type}
-实体摘要: {entity_summary}
-实体属性: {attrs_str}
+Entity name: {entity_name}
+Entity type: {entity_type}
+Entity summary: {entity_summary}
+Entity attributes: {attrs_str}
 
-上下文信息:
+Context:
 {context_str}
 
-请生成JSON，包含以下字段:
+Generate a JSON with the following fields:
 
-1. bio: 社交媒体简介，200字
-2. persona: 详细人设描述（2000字的纯文本），需包含:
-   - 基本信息（年龄、职业、教育背景、所在地）
-   - 人物背景（重要经历、与事件的关联、社会关系）
-   - 性格特征（MBTI类型、核心性格、情绪表达方式）
-   - 社交媒体行为（发帖频率、内容偏好、互动风格、语言特点）
-   - 立场观点（对话题的态度、可能被激怒/感动的内容）
-   - 独特特征（口头禅、特殊经历、个人爱好）
-   - 个人记忆（人设的重要部分，要介绍这个个体与事件的关联，以及这个个体在事件中的已有动作与反应）
-3. age: 年龄数字（必须是整数）
-4. gender: 性别，必须是英文: "male" 或 "female"
-5. mbti: MBTI类型（如INTJ、ENFP等）
-6. country: 国家（使用中文，如"中国"）
-7. profession: 职业
-8. interested_topics: 感兴趣话题数组
+1. bio: Social media bio, ~200 characters
+2. persona: Detailed persona description (~2000 words, plain text), including:
+   - Basic info (age, occupation, educational background, location)
+   - Background (key experiences, connection to events, social relationships)
+   - Personality traits (MBTI type, core character, emotional expression)
+   - Social media behavior (posting frequency, content preferences, interaction style, language style)
+   - Stance & opinions (attitude toward topics, things that may provoke or move them)
+   - Unique traits (catchphrases, special experiences, personal hobbies)
+   - Personal memory (important part of the persona: describe this individual's connection to the event and their actions/reactions within it)
+3. age: Age as an integer
+4. gender: Must be English: "male" or "female"
+5. mbti: MBTI type (e.g. INTJ, ENFP)
+6. country: Country name in English (e.g. "United States")
+7. profession: Occupation
+8. interested_topics: Array of topics of interest
 
-重要:
-- 所有字段值必须是字符串或数字，不要使用换行符
-- persona必须是一段连贯的文字描述
-- 使用中文（除了gender字段必须用英文male/female）
-- 内容要与实体信息保持一致
-- age必须是有效的整数，gender必须是"male"或"female"
+Important:
+- All field values must be strings or numbers; do not use newline characters
+- persona must be a continuous paragraph of text
+- Use English (gender field must be "male" or "female")
+- Content must be consistent with the entity information
+- age must be a valid integer, gender must be "male" or "female"
 """
 
     def _build_group_persona_prompt(
@@ -735,40 +735,40 @@ class OasisProfileGenerator:
         attrs_str = json.dumps(entity_attributes, ensure_ascii=False) if entity_attributes else "无"
         context_str = context[:3000] if context else "无额外上下文"
         
-        return f"""为机构/群体实体生成详细的社交媒体账号设定,最大程度还原已有现实情况。
+        return f"""Generate a detailed social media account profile for this institution/group entity, reflecting real-world context as closely as possible.
 
-实体名称: {entity_name}
-实体类型: {entity_type}
-实体摘要: {entity_summary}
-实体属性: {attrs_str}
+Entity name: {entity_name}
+Entity type: {entity_type}
+Entity summary: {entity_summary}
+Entity attributes: {attrs_str}
 
-上下文信息:
+Context:
 {context_str}
 
-请生成JSON，包含以下字段:
+Generate a JSON with the following fields:
 
-1. bio: 官方账号简介，200字，专业得体
-2. persona: 详细账号设定描述（2000字的纯文本），需包含:
-   - 机构基本信息（正式名称、机构性质、成立背景、主要职能）
-   - 账号定位（账号类型、目标受众、核心功能）
-   - 发言风格（语言特点、常用表达、禁忌话题）
-   - 发布内容特点（内容类型、发布频率、活跃时间段）
-   - 立场态度（对核心话题的官方立场、面对争议的处理方式）
-   - 特殊说明（代表的群体画像、运营习惯）
-   - 机构记忆（机构人设的重要部分，要介绍这个机构与事件的关联，以及这个机构在事件中的已有动作与反应）
-3. age: 固定填30（机构账号的虚拟年龄）
-4. gender: 固定填"other"（机构账号使用other表示非个人）
-5. mbti: MBTI类型，用于描述账号风格，如ISTJ代表严谨保守
-6. country: 国家（使用中文，如"中国"）
-7. profession: 机构职能描述
-8. interested_topics: 关注领域数组
+1. bio: Official account bio, ~200 characters, professional in tone
+2. persona: Detailed account profile description (~2000 words, plain text), including:
+   - Basic institution info (official name, nature, founding background, main functions)
+   - Account positioning (account type, target audience, core purpose)
+   - Communication style (language characteristics, common expressions, topics to avoid)
+   - Content characteristics (content types, posting frequency, active time periods)
+   - Stance & attitude (official position on key topics, how it handles controversy)
+   - Special notes (representative audience profile, operational habits)
+   - Institutional memory (important part of the persona: describe this institution's connection to the event and its actions/reactions within it)
+3. age: Fixed value 30 (virtual age for institutional accounts)
+4. gender: Fixed value "other" (institutions use "other" to indicate non-personal)
+5. mbti: MBTI type to describe account style (e.g. ISTJ for rigorous and conservative)
+6. country: Country name in English (e.g. "United States")
+7. profession: Description of institutional function
+8. interested_topics: Array of areas of focus
 
-重要:
-- 所有字段值必须是字符串或数字，不允许null值
-- persona必须是一段连贯的文字描述，不要使用换行符
-- 使用中文（除了gender字段必须用英文"other"）
-- age必须是整数30，gender必须是字符串"other"
-- 机构账号发言要符合其身份定位"""
+Important:
+- All field values must be strings or numbers; null values are not allowed
+- persona must be a continuous paragraph of text; do not use newline characters
+- Use English (gender field must be "other")
+- age must be the integer 30, gender must be the string "other"
+- The institutional account's speech must match its identity and positioning"""
     
     def _generate_profile_rule_based(
         self,
@@ -810,10 +810,10 @@ class OasisProfileGenerator:
             return {
                 "bio": f"Official account for {entity_name}. News and updates.",
                 "persona": f"{entity_name} is a media entity that reports news and facilitates public discourse. The account shares timely updates and engages with the audience on current events.",
-                "age": 30,  # 机构虚拟年龄
-                "gender": "other",  # 机构使用other
-                "mbti": "ISTJ",  # 机构风格：严谨保守
-                "country": "中国",
+                "age": 30,
+                "gender": "other",
+                "mbti": "ISTJ",
+                "country": "United States",
                 "profession": "Media",
                 "interested_topics": ["General News", "Current Events", "Public Affairs"],
             }
@@ -822,10 +822,10 @@ class OasisProfileGenerator:
             return {
                 "bio": f"Official account of {entity_name}.",
                 "persona": f"{entity_name} is an institutional entity that communicates official positions, announcements, and engages with stakeholders on relevant matters.",
-                "age": 30,  # 机构虚拟年龄
-                "gender": "other",  # 机构使用other
-                "mbti": "ISTJ",  # 机构风格：严谨保守
-                "country": "中国",
+                "age": 30,
+                "gender": "other",
+                "mbti": "ISTJ",
+                "country": "United States",
                 "profession": entity_type,
                 "interested_topics": ["Public Policy", "Community", "Official Announcements"],
             }
