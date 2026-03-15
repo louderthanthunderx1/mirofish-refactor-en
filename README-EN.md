@@ -115,15 +115,16 @@ cp .env.example .env
 **Required Environment Variables:**
 
 ```env
-# LLM API Configuration (supports any LLM API with OpenAI SDK format)
-# Recommended: Alibaba Qwen-plus model via Bailian Platform: https://bailian.console.aliyun.com/
-# High consumption, try simulations with fewer than 40 rounds first
+# LLM API (OpenAI or any OpenAI-compatible API)
+# Supported options:
+#   - OpenAI e.g. gpt-4o-mini: https://platform.openai.com/ (default in .env.example)
+#   - Alibaba Bailian qwen-plus: https://bailian.console.aliyun.com/ (high usage; try fewer than 40 rounds first)
 LLM_API_KEY=your_api_key
-LLM_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
-LLM_MODEL_NAME=qwen-plus
+LLM_BASE_URL=https://api.openai.com/v1
+LLM_MODEL_NAME=gpt-4o-mini
 
-# Zep Cloud Configuration
-# Free monthly quota is sufficient for simple usage: https://app.getzep.com/
+# Zep Cloud
+# Free tier is enough for basic use: https://app.getzep.com/
 ZEP_API_KEY=your_zep_api_key
 ```
 

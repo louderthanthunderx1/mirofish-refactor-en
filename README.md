@@ -115,14 +115,15 @@ cp .env.example .env
 **ตัวแปรสภาพแวดล้อมที่จำเป็น:**
 
 ```env
-# การตั้งค่า LLM API (รองรับ LLM API ใดๆ ในรูปแบบ OpenAI SDK)
-# แนะนำใช้โมเดล qwen-plus จาก Alibaba Bailian: https://bailian.console.aliyun.com/
-# หมายเหตุ: การใช้งานสูง ลองจำลองน้อยกว่า 40 รอบก่อนได้
+# LLM API (รองรับ OpenAI หรือ API ที่ใช้รูปแบบ OpenAI ได้)
+# ตัวเลือกที่รองรับ:
+#   - OpenAI เช่น gpt-4o-mini: https://platform.openai.com/ (ค่าใน .env.example ใช้ตัวนี้)
+#   - Alibaba Bailian qwen-plus: https://bailian.console.aliyun.com/ (การใช้งานสูง ลองจำลองน้อยกว่า 40 รอบก่อน)
 LLM_API_KEY=your_api_key
-LLM_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
-LLM_MODEL_NAME=qwen-plus
+LLM_BASE_URL=https://api.openai.com/v1
+LLM_MODEL_NAME=gpt-4o-mini
 
-# การตั้งค่า Zep Cloud
+# Zep Cloud
 # โควตาฟรีรายเดือนเพียงพอสำหรับการใช้งานพื้นฐาน: https://app.getzep.com/
 ZEP_API_KEY=your_zep_api_key
 ```
